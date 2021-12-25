@@ -1,0 +1,24 @@
+package webElementPage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ContentPlay {
+	
+	public static void main(String[] args) {
+		 
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://bongobd.com/shows");
+		
+		driver.navigate().to("https://bongobd.com/watch/DoC1SZp3bP8");
+		
+		driver.findElement(By.xpath("//video[@id='vod_html5_api']")).click();
+		//driver.findElement(By.cssSelector("button[title='Play Video'] span[class='vjs-icon-placeholder']")).click();
+	
+	}
+
+}

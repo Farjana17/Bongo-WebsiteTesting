@@ -1,0 +1,35 @@
+package webElementPage;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ContentPlay {
+	
+	public static void main(String[] args) throws InterruptedException, AWTException {
+		 
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://bongobd.com/shows");
+		
+		driver.navigate().to("https://bongobd.com/watch/CC5F2z925db");
+		Thread.sleep(3000);
+		
+		Robot rb= new Robot();
+		//rb.keyPress(KeyEvent.VK_SPACE);
+		
+		//driver.findElement(By.xpath("//button[@title='Play Video']//span[@class='vjs-icon-placeholder']")).click();
+		
+	
+	}
+
+}

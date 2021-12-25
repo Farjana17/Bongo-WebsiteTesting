@@ -1,0 +1,27 @@
+package webElementPage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginPage {
+ public static void main(String[] args) throws InterruptedException {
+	
+	 WebDriverManager.chromedriver().setup();
+	 
+	WebDriver driver= new ChromeDriver();
+	driver.get("https://bongobd.com/");
+	
+	driver.manage().window().maximize();
+	
+	driver.findElement(By.xpath("//span[normalize-space()='Login/Register']")).click();
+	Thread.sleep(5000);
+	
+	//driver.findElement(By.cssSelector("input[type='text']")).sendKeys("1521489505");
+	//driver.findElement(By.xpath("//input[@type='text']")).sendKeys("1521489505");
+	
+	driver.findElement(By.xpath("//span[normalize-space()='Not now']")).click();
+}
+}
